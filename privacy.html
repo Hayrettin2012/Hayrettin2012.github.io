@@ -33,15 +33,24 @@
 
   <section id="tr" lang="tr">
     <h2>Gizlilik Politikası</h2>
-    <p class="meta"><b>Son güncelleme:</b> 8 Kasım 2026<br><b>Geliştirici (veri sorumlusu):</b> Hayrettin Kalkan – İletişim: <a href="mailto:metin5onlymerkez@gmail.com">metin5onlymerkez@gmail.com</a></p>
+    <p class="meta"><b>Son güncelleme:</b> 15 Kasım 2026<br><b>Geliştirici (veri sorumlusu):</b> Hayrettin Kalkan – İletişim: <a href="mailto:metin5onlymerkez@gmail.com">metin5onlymerkez@gmail.com</a></p>
 
     <h3>1. Kısaca</h3>
-    <p>Fortress of Ages çevrimdışı oynanabilen bir oyundur. Hesap açtırmaz; adın, e-postan, telefon numaran gibi bilgileri istemez ve toplamaz.</p>
+    <p>Fortress of Ages çevrimdışı oynanabilen bir oyundur. Hesap açtırmaz; adın, e-postan, telefon numaran gibi bilgileri istemez ve toplamaz. İnternet bağlantısı varsa oyun, oyun ayarlarını almak, saati doğrulamak, hediye kodlarını ve satın almaları kontrol etmek için Unity'nin sunucularına <b>anonim bir oyuncu kimliğiyle</b> bağlanır (6. bölüm).</p>
 
     <h3>2. Cihazında saklanan veriler</h3>
-    <p>Oyun ilerlemen (dalga, yükseltmeler, elmas, ayarlar, dil seçimi) yalnızca <b>cihazında</b> saklanır ve bize gönderilmez. Oyunu silersen bu veriler de silinir.</p>
+    <p>Oyun ilerlemen (dalga, yükseltmeler, elmas, ayarlar, dil seçimi) <b>cihazında</b> saklanır ve bize gönderilmez. Google Play Oyunlar'a giriş yaptıysan ilerlemenin bir kopyası ayrıca Google hesabına yedeklenir (3. bölüm). Oyunu silersen cihazdaki veriler de silinir.</p>
 
-    <h3>3. Reklamlar (Google AdMob)</h3>
+    <h3>3. Google Play Oyunlar (isteğe bağlı)</h3>
+    <p>Oyun, gerçek sıralama listesi ve bulut yedeği için <b>Google Play Oyunlar Hizmetleri</b>'ni kullanır. Play Oyunlar'a giriş yapmak isteğe bağlıdır; giriş yapmasan da oyun aynen oynanır.</p>
+    <ul>
+      <li>Giriş yaptığında Google, Play Oyunlar profilini (oyuncu kimliği, oyuncu adı ve avatar) oyunla paylaşır. Oyuncu adın ve dalga puanın sıralama listesinde diğer oyunculara görünür; görünürlüğü Play Oyunlar profil ayarlarından değiştirebilirsin.</li>
+      <li>Oyun ilerlemen, telefon değiştirdiğinde ya da oyunu yeniden kurduğunda geri yüklenebilsin diye Google hesabındaki "Kayıtlı Oyunlar" alanına yedeklenir. Bu yedeği biz değil Google saklar.</li>
+      <li>Google, bu hizmet için skorları, kayıtlı oyun verisini ve hizmetin kararlılığı için teknik tanılama bilgilerini işler. Veriler HTTPS ile şifrelenerek aktarılır.</li>
+      <li>Play Oyunlar hesabını ve oyunlarla ilgili verilerini Play Oyunlar profilinden ya da Google Hesabım'dan silebilirsin. Ayrıntı: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+    </ul>
+
+    <h3>4. Reklamlar (Google AdMob)</h3>
     <p>Oyunda isteğe bağlı <b>ödüllü reklamlar</b> vardır; reklamı yalnızca sen, bir ödül karşılığında başlatırsın. Reklamlar Google AdMob ile gösterilir. AdMob, reklam göstermek, ölçmek ve sahteciliği önlemek için cihazından şu verileri işleyebilir: reklam kimliği (Android Advertising ID), IP adresi ve buna bağlı yaklaşık konum, cihaz ve uygulama bilgileri, reklam etkileşimleri.</p>
     <ul>
       <li>Avrupa Ekonomik Alanı, Birleşik Krallık ve İsviçre'de oyun ilk açılışta Google'ın rıza formunu gösterir; kişiselleştirilmiş reklama izin verip vermemek senin elindedir. Seçimini oyunda <b>Ayarlar &gt; Gizlilik seçenekleri</b> ile değiştirebilirsin.</li>
@@ -49,33 +58,56 @@
       <li>Google'ın verileri nasıl kullandığı: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
     </ul>
 
-    <h3>4. Uygulama içi satın almalar</h3>
+    <h3>5. Uygulama içi satın almalar</h3>
     <p>Satın almalar Google Play Faturalandırma ile yapılır; ödeme Google tarafından işlenir ve kart bilgilerin bize ulaşmaz. Satın alma altyapısı (Unity In-App Purchasing / Unity Gaming Services) satın alımı doğrulamak için işlem bilgilerini ve anonim bir kurulum kimliğini işleyebilir.</p>
+    <ul>
+      <li>Sahte satın almaları önlemek için oyun, Google'ın satın alma imzasını cihazında kontrol eder.</li>
+      <li>İnternet varsa satın alma ayrıca sunucumuzda (Unity Cloud Code) kontrol edilir: satın alma kodu, Google Play Developer API'si üzerinden Google'a sorulur. Aynı satın almanın başka bir hesapta kullanılmasını engellemek için satın alma kodunun <b>tek yönlü özeti</b> (SHA-256; geri çevrilemez), ürün adı, tarih ve anonim oyuncu kimliğin Unity Cloud Save'de saklanır. Ad, e-posta ya da ödeme bilgisi saklanmaz.</li>
+    </ul>
 
-    <h3>5. Çökme ve performans verileri</h3>
+    <h3>6. Çevrimiçi özellikler (Unity Gaming Services)</h3>
+    <p>İnternet bağlantısı varsa oyun, Unity Technologies'in <b>Unity Gaming Services</b> hizmetine anonim olarak bağlanır. Cihazında rastgele bir oyuncu kimliği oluşturulur; bu kimlik adınla, e-postanla ya da Google hesabınla ilişkilendirilmez. Bu bağlantı şu işler için kullanılır:</p>
+    <ul>
+      <li><b>Oyun ayarları (Remote Config):</b> etkinlik ayarları, duyurular ve güncelleme bildirimleri sunucudan alınır.</li>
+      <li><b>Sunucu saati:</b> çevrimdışı kazanç ve günlük ödüllerin cihaz saatini değiştirerek kandırılmasını önlemek için cihaz saati sunucu saatiyle karşılaştırılır. Cihaz saatin sunucuya gönderilmez.</li>
+      <li><b>Hediye kodları:</b> bir kod girdiğinde, kodun her oyuncu tarafından bir kez kullanılabilmesi için kullandığın kodlar anonim oyuncu kimliğinle birlikte saklanır.</li>
+      <li><b>Satın alma kontrolü:</b> 5. bölümde açıklandığı gibi.</li>
+    </ul>
+    <p>Bu veriler yalnızca yukarıdaki amaçlarla kullanılır ve satılmaz; Unity Technologies hizmet sağlayıcımız olarak bu verileri bizim adımıza işler. Veriler HTTPS ile şifrelenerek aktarılır. Oyunu silip yeniden kurduğunda cihazında yeni bir anonim kimlik oluşur. Unity'nin gizlilik politikası: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">unity.com/legal/game-player-and-app-user-privacy-policy</a></p>
+
+    <h3>7. Çökme ve performans verileri</h3>
     <p>Oyun beklenmedik şekilde kapanırsa, hatayı düzeltebilmemiz için Unity Technologies'in tanılama hizmetine anonim teknik bilgiler (cihaz modeli, işletim sistemi sürümü, hata ayrıntıları) gönderilebilir. Bu bilgiler seni kişisel olarak tanımlamaz. Google Play de çökme istatistiklerini kendi gizlilik politikasına göre toplar.</p>
 
-    <h3>6. Çocuklar</h3>
+    <h3>8. Çocuklar</h3>
     <p>Oyun 13 yaş altındaki çocuklara yönelik değildir ve bilerek 13 yaş altı çocuklardan veri toplamaz.</p>
 
-    <h3>7. Haklarınız (KVKK / GDPR)</h3>
-    <p>6698 sayılı KVKK ve GDPR kapsamında verilerine erişme, düzeltilmesini ya da silinmesini isteme ve işlemeye itiraz etme hakkın vardır. Oyun bizim tarafımızda kişisel veri tutmadığı için reklam verileriyle ilgili taleplerini Google'a iletebilir ya da bize <a href="mailto:metin5onlymerkez@gmail.com">metin5onlymerkez@gmail.com</a> adresinden yazabilirsin; yardımcı oluruz.</p>
+    <h3>9. Haklarınız (KVKK / GDPR)</h3>
+    <p>6698 sayılı KVKK ve GDPR kapsamında verilerine erişme, düzeltilmesini ya da silinmesini isteme ve işlemeye itiraz etme hakkın vardır. Sunucuda yalnızca 6. bölümdeki anonim kayıtlar tutulur; bunlar seni doğrudan tanımlamaz. Reklam ve Play Oyunlar verileriyle ilgili taleplerini Google'a iletebilir, diğer tüm taleplerin için bize <a href="mailto:metin5onlymerkez@gmail.com">metin5onlymerkez@gmail.com</a> adresinden yazabilirsin; yardımcı oluruz.</p>
 
-    <h3>8. Değişiklikler</h3>
+    <h3>10. Değişiklikler</h3>
     <p>Bu politikayı değiştirirsek bu sayfadaki tarihi güncelleriz.</p>
   </section>
 
   <section id="en" lang="en">
     <h2>Privacy Policy</h2>
-    <p class="meta"><b>Last updated:</b> November 8, 2026<br><b>Developer (data controller):</b> Hayrettin Kalkan – Contact: <a href="mailto:metin5onlymerkez@gmail.com">metin5onlymerkez@gmail.com</a></p>
+    <p class="meta"><b>Last updated:</b> November 15, 2026<br><b>Developer (data controller):</b> Hayrettin Kalkan – Contact: <a href="mailto:metin5onlymerkez@gmail.com">metin5onlymerkez@gmail.com</a></p>
 
     <h3>1. In short</h3>
-    <p>Fortress of Ages can be played offline. It does not require an account and does not ask for or collect your name, e-mail or phone number.</p>
+    <p>Fortress of Ages can be played offline. It does not require an account and does not ask for or collect your name, e-mail or phone number. When an internet connection is available, the game connects to Unity's servers with an <b>anonymous player ID</b> to fetch game settings, verify the time, and check gift codes and purchases (section 6).</p>
 
     <h3>2. Data stored on your device</h3>
-    <p>Your progress (waves, upgrades, gems, settings, language) is stored <b>only on your device</b> and is never sent to us. Uninstalling the game deletes it.</p>
+    <p>Your progress (waves, upgrades, gems, settings, language) is stored <b>on your device</b> and is never sent to us. If you sign in to Google Play Games, a copy of your progress is also backed up to your Google account (section 3). Uninstalling the game deletes the data on your device.</p>
 
-    <h3>3. Ads (Google AdMob)</h3>
+    <h3>3. Google Play Games (optional)</h3>
+    <p>The game uses <b>Google Play Games Services</b> for a real leaderboard and cloud backup. Signing in to Play Games is optional; the game works the same without it.</p>
+    <ul>
+      <li>When you sign in, Google shares your Play Games profile (player ID, gamer name and avatar) with the game. Your gamer name and wave score are visible to other players on the leaderboard; you can change your profile visibility in the Play Games settings.</li>
+      <li>Your progress is backed up to "Saved Games" in your Google account so it can be restored when you change phones or reinstall the game. This backup is stored by Google, not by us.</li>
+      <li>For this service Google processes scores, saved game data and technical diagnostics used to keep the service stable. Data is encrypted in transit using HTTPS.</li>
+      <li>You can delete your Play Games account and its game data from your Play Games profile or Google My Account. Details: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></li>
+    </ul>
+
+    <h3>4. Ads (Google AdMob)</h3>
     <p>The game contains optional <b>rewarded ads</b> that you start yourself in exchange for a reward. Ads are served by Google AdMob, which may process the following data from your device to show and measure ads and prevent fraud: advertising ID, IP address and the approximate location derived from it, device and app information, and ad interactions.</p>
     <ul>
       <li>In the European Economic Area, the UK and Switzerland the game shows Google's consent form on first launch; you choose whether to allow personalised ads. You can change your choice at any time in <b>Settings &gt; Privacy options</b>.</li>
@@ -83,19 +115,33 @@
       <li>How Google uses data: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
     </ul>
 
-    <h3>4. In-app purchases</h3>
+    <h3>5. In-app purchases</h3>
     <p>Purchases are made through Google Play Billing; payments are processed by Google and we never receive your card details. The purchasing framework (Unity In-App Purchasing / Unity Gaming Services) may process transaction details and an anonymous installation ID to validate purchases.</p>
+    <ul>
+      <li>To prevent fake purchases, the game checks Google's purchase signature on your device.</li>
+      <li>When online, the purchase is also checked on our server (Unity Cloud Code): the purchase token is verified with Google through the Google Play Developer API. To stop the same purchase from being used on another account, a <b>one-way hash</b> of the purchase token (SHA-256; it cannot be reversed), the product name, the date and your anonymous player ID are stored in Unity Cloud Save. No name, e-mail or payment details are stored.</li>
+    </ul>
 
-    <h3>5. Crash and performance data</h3>
+    <h3>6. Online features (Unity Gaming Services)</h3>
+    <p>When an internet connection is available, the game connects anonymously to <b>Unity Gaming Services</b> by Unity Technologies. A random player ID is created on your device; it is not linked to your name, e-mail or Google account. The connection is used to:</p>
+    <ul>
+      <li><b>Game settings (Remote Config):</b> fetch event settings, announcements and update notices.</li>
+      <li><b>Server time:</b> compare your device clock with the server clock so offline earnings and daily rewards cannot be cheated by changing the device time. Your device time is not sent to the server.</li>
+      <li><b>Gift codes:</b> when you enter a code, the codes you have used are stored with your anonymous player ID so each code can be used once per player.</li>
+      <li><b>Purchase checks:</b> as described in section 5.</li>
+    </ul>
+    <p>This data is used only for the purposes above and is never sold; Unity Technologies processes it on our behalf as our service provider. Data is encrypted in transit using HTTPS. Reinstalling the game creates a new anonymous ID on your device. Unity's privacy policy: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">unity.com/legal/game-player-and-app-user-privacy-policy</a></p>
+
+    <h3>7. Crash and performance data</h3>
     <p>If the game closes unexpectedly, anonymous technical information (device model, operating system version, error details) may be sent to Unity Technologies' diagnostics service so that we can fix the problem. This information does not identify you personally. Google Play also collects crash statistics under its own privacy policy.</p>
 
-    <h3>6. Children</h3>
+    <h3>8. Children</h3>
     <p>The game is not directed at children under 13 and does not knowingly collect data from children under 13.</p>
 
-    <h3>7. Your rights (GDPR / KVKK)</h3>
-    <p>You have the right to access, correct or delete your data and to object to processing. As the game keeps no personal data on our side, you can direct ad-data requests to Google or write to us at <a href="mailto:metin5onlymerkez@gmail.com">metin5onlymerkez@gmail.com</a> and we will help.</p>
+    <h3>9. Your rights (GDPR / KVKK)</h3>
+    <p>You have the right to access, correct or delete your data and to object to processing. Our server only keeps the anonymous records described in section 6, which do not directly identify you. You can direct ad and Play Games data requests to Google; for anything else write to us at <a href="mailto:metin5onlymerkez@gmail.com">metin5onlymerkez@gmail.com</a> and we will help.</p>
 
-    <h3>8. Changes</h3>
+    <h3>10. Changes</h3>
     <p>If we change this policy we will update the date on this page.</p>
   </section>
 
